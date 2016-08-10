@@ -5,7 +5,7 @@
 Major Modules are:
 * Controllers:
 
-  Contains the controllers which accepts the REST API calls
+  Contains controllers which accepts the REST API calls and provides JSON response.
 * Models:
 
   Contains two models which are `Url` and `UrlContent`.
@@ -14,8 +14,8 @@ Major Modules are:
    Responsible to wite the custom logic before saving any url or its content
 * Parsers:
 
-  Responsible to read the target url contet. Uses the `nokogiri` gem to parse the hrml content.
-  It also responsible for checking the duplicate content and categorizing content based on it type i..e(h1, h2, a etc.)
+  Responsible to read the target url contet. Uses the `nokogiri` gem to parse the html content.
+  It also responsible for checking the duplicate content and categorizing content based on its type i..e(h1, h2, a etc.)
 * Parser Client:
 
    Client contains a html and respected javascript file where we can configre the url.
