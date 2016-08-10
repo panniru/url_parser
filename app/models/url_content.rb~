@@ -1,0 +1,2 @@
+class UrlContent < ApplicationRecord
+end

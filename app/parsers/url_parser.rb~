@@ -1,0 +1,26 @@
+### This class responsible for parsing the url content
+### using nokogiri and prepares the url and it's respectred
+### children objects
+
+require 'nokogiri'
+require 'open-uri'
+class UrlParser
+  attr_accessor :url
+  def initialize(url)
+    self.url = url;
+  end
+
+  ## Parses the url content with and
+  ## generates UrlContent objects and returns
+  def parse_content
+    doc = Nokogiri::HTML(open(url.source))
+    doc.css('a', 'h1, 'h2', 'h3').map do |link|
+      UrlContent.new do |urlc|
+        urlc.content = link.content
+        urlc.content_type = link.node_name
+        urlc.url = self.url
+      end
+    end
+  end
+
+end
