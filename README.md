@@ -14,7 +14,7 @@ Major Modules are:
    Responsible to wite the custom logic before saving any url or its content
 * Parsers:
 
-  Responsible to read the target url contet. Uses the `nokogiri` gem to parse the html content.
+  Responsible to read the target url contet. Uses the `nokogiri` gem to parse the html content. It removes the spaces before and after the content and encodes to `utf-8`
   It also responsible for checking the duplicate content and categorizing content based on its type i..e(h1, h2, a etc.)
 * Parser Client:
 
